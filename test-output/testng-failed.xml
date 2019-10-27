@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MySuite]">
+  <test name="MyTest(failed)">
+    <classes>
+      <class name="Login.Login">
+        <methods>
+          <include name="SetBaseURL"/>
+          <include name="abc"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- Login.Login -->
+      <class name="WaferProcess.CreateWafer">
+        <methods>
+          <include name="abc"/>
+          <include name="Close"/>
+          <include name="SetBaseURL"/>
+        </methods>
+      </class> <!-- WaferProcess.CreateWafer -->
+    </classes>
+  </test> <!-- MyTest(failed) -->
+</suite> <!-- Failed suite [MySuite] -->

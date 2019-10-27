@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10143" started-at="2019-07-18T12:31:09Z" finished-at="2019-07-18T12:31:19Z">
+  <suite name="MySuite" duration-ms="64616" started-at="2019-10-27T04:48:30Z" finished-at="2019-10-27T04:49:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10143" started-at="2019-07-18T12:31:09Z" finished-at="2019-07-18T12:31:19Z">
-      <class name="testPackage.TestOnly">
-        <test-method status="PASS" signature="testOnly()[pri:0, instance:testPackage.TestOnly@ae45eb6]" name="testOnly" duration-ms="10092" started-at="2019-07-18T12:31:09Z" finished-at="2019-07-18T12:31:19Z">
+    <test name="MyTest" duration-ms="64616" started-at="2019-10-27T04:48:30Z" finished-at="2019-10-27T04:49:34Z">
+      <class name="Login.Login">
+        <test-method status="PASS" signature="abc()[pri:0, instance:Login.Login@265adfad]" name="abc" duration-ms="45454" started-at="2019-10-27T10:18:30Z" finished-at="2019-10-27T10:19:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testOnly -->
-      </class> <!-- testPackage.TestOnly -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- abc -->
+      </class> <!-- Login.Login -->
+      <class name="WaferProcess.CreateWafer">
+        <test-method status="PASS" signature="SetBaseURL()[pri:0, instance:WaferProcess.CreateWafer@5bf0fe62]" name="SetBaseURL" is-config="true" duration-ms="17" started-at="2019-10-27T10:18:30Z" finished-at="2019-10-27T10:18:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetBaseURL -->
+        <test-method status="PASS" signature="SetBaseURL()[pri:0, instance:Login.Login@265adfad]" name="SetBaseURL" is-config="true" duration-ms="1" started-at="2019-10-27T10:18:30Z" finished-at="2019-10-27T10:18:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetBaseURL -->
+        <test-method status="PASS" signature="abc()[pri:0, instance:WaferProcess.CreateWafer@5bf0fe62]" name="abc" duration-ms="19127" started-at="2019-10-27T10:19:15Z" finished-at="2019-10-27T10:19:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abc -->
+        <test-method status="PASS" signature="Close()[pri:0, instance:WaferProcess.CreateWafer@5bf0fe62]" name="Close" is-config="true" duration-ms="0" started-at="2019-10-27T10:19:34Z" finished-at="2019-10-27T10:19:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method status="PASS" signature="Close()[pri:0, instance:Login.Login@265adfad]" name="Close" is-config="true" duration-ms="0" started-at="2019-10-27T10:19:34Z" finished-at="2019-10-27T10:19:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+      </class> <!-- WaferProcess.CreateWafer -->
+    </test> <!-- MyTest -->
+  </suite> <!-- MySuite -->
 </testng-results>

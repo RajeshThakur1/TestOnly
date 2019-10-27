@@ -1,166 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>TestOnly</groupId>
-  <artifactId>TestOnly</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-   <properties>
-	<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-	<serenity.version>1.5.3</serenity.version>
-	<serenity.maven.version>1.5.3</serenity.maven.version>
-	<serenity.cucumber.version>1.1.8</serenity.cucumber.version>
-</properties>
-
-<!-- Define the Bintray repos for convenience -->
-<repositories>
-	<repository>
-		<id>serenity</id>
-		<name>bintray</name>
-		<url>http://dl.bintray.com/serenity/maven</url>
-	</repository>
-</repositories>
-<pluginRepositories>
-	<pluginRepository>
-		<id>serenity</id>
-		<name>bintray-plugins</name>
-		<url>http://dl.bintray.com/serenity/maven</url>
-	</pluginRepository>
-</pluginRepositories>
-
-  
-  
-  
- 
-	
-  <dependencies>
-  
-  <dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>3.0.0</version>
-    <scope>test</scope>
-</dependency>
-
-<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-
-
-	<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>2.53.1</version>
-	</dependency>
-	
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
-			<scope>test</scope>
-		</dependency>
-		
-		
-			<dependency>
-   			 <groupId>org.apache.commons</groupId>
-    		 <artifactId>commons-lang3</artifactId>
-   			 <version>3.9</version>
-		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<dependency>
-          <groupId>commons-io</groupId>
-          <artifactId>commons-io</artifactId>
-          <version>2.5</version>
-        </dependency>
-  
-  
-  </dependencies>
-  
-  <build>
-	<plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.18.1</version>
-                <executions>
-                    <execution>
-                        <configuration>
-                            <forkCount>3</forkCount>
-                            <reuseForks>true</reuseForks>
-                            <encoding>UTF-8</encoding>
-                            <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-                            <testFailureIgnore>true</testFailureIgnore>
-                            <includes>
-                                <includesFile>**/*UITestsRunner.java</includesFile>
-                            </includes>
-                        </configuration>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>3.8.0</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <projectName>testing</projectName> 
-
-                            <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
-                            <cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
-                            <buildNumber>1</buildNumber>
-                            <parallelTesting>false</parallelTesting>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-</build>
-<profiles>
-	<profile>
-		<id>firefox</id>
-		<properties>
-			<webdriver.driver>firefox</webdriver.driver>
-		</properties>
-	</profile>
-	<profile>
-		<id>chrome</id>
-		<properties>
-			<webdriver.driver>chrome</webdriver.driver>
-		</properties>
-	</profile>
-	<profile>
-		<id>phantomjs</id>
-		<properties>
-			<webdriver.driver>phantomjs</webdriver.driver>
-		</properties>
-	</profile>
-</profiles>
-  
-  
-  
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com</groupId>
+   <artifactId>ShopfloorAutomation</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
+   <dependencies>
+      <dependency>
+         <groupId>org.apache.poi</groupId>
+         <artifactId>poi</artifactId>
+         <version>3.12</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.poi</groupId>
+         <artifactId>poi-ooxml</artifactId>
+         <version>3.12</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+      <dependency>
+         <groupId>log4j</groupId>
+         <artifactId>log4j</artifactId>
+         <version>1.2.17</version>
+      </dependency>
+      <!-- pavan End**************************** -->
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>3.8.1</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <!-- jsoup HTML parser library @ https://jsoup.org/ -->
+         <groupId>org.jsoup</groupId>
+         <artifactId>jsoup</artifactId>
+         <version>1.11.3</version>
+      </dependency>
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-java</artifactId>
+         <version>2.53.1</version>
+      </dependency>
+      <dependency>
+         <groupId>org.testng</groupId>
+         <artifactId>testng</artifactId>
+         <version>6.14.3</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.poi</groupId>
+         <artifactId>poi</artifactId>
+         <version>3.17</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.poi</groupId>
+         <artifactId>poi-ooxml</artifactId>
+         <version>3.17</version>
+      </dependency>
+      <dependency>
+         <groupId>com.aventstack</groupId>
+         <artifactId>extentreports</artifactId>
+         <version>3.1.2</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.commons</groupId>
+         <artifactId>commons-lang3</artifactId>
+         <version>3.0</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.commons</groupId>
+         <artifactId>commons-io</artifactId>
+         <version>1.3.2</version>
+      </dependency>
+      <dependency>
+         <groupId>log4j</groupId>
+         <artifactId>log4j</artifactId>
+         <version>1.2.17</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-api</artifactId>
+         <version>2.7</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-core</artifactId>
+         <version>2.7</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-api</artifactId>
+         <version>2.3</version>
+      </dependency>
+      <dependency>
+         <groupId>org.testng</groupId>
+         <artifactId>testng</artifactId>
+         <version>6.8.8</version>
+      </dependency>
+   </dependencies>
 </project>
